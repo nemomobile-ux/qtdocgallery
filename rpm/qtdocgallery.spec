@@ -61,5 +61,5 @@ rm -rf %{buildroot}
 %{_libdir}/libQt5DocGallery.la
 %{_libdir}/cmake/Qt5DocGallery/Qt5DocGalleryConfig.cmake
 %{_libdir}/cmake/Qt5DocGallery/Qt5DocGalleryConfigVersion.cmake
-%{_datadir}/qt5/mkspecs/modules/qt_lib_docgallery.pri
-%{_datadir}/qt5/mkspecs/modules/qt_lib_docgallery_private.pri
+%{_prefix}/*/qt5/mkspecs/modules/qt_lib_docgallery.pri
+%{_prefix}/*/qt5/mkspecs/modules/qt_lib_docgallery_private.pri
