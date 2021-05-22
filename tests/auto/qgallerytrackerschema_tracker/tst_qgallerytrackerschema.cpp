@@ -2234,7 +2234,7 @@ void tst_QGalleryTrackerSchema::queryResponseFilter_data()
         QGalleryFilter filter
                 = QDocumentGallery::lastModified > QDateTime(QDate(2008, 06, 01), QTime(12, 5, 8));
 
-        QTest::newRow("Image.lastModified > 2008-06-01T12:05:08")
+        QTest::newRow("Image.lastModified > 2008-06-01T12:05:08.000")
                 << "Image"
                 << QString()
                 << QGalleryQueryRequest::AllDescendants
@@ -2243,14 +2243,14 @@ void tst_QGalleryTrackerSchema::queryResponseFilter_data()
                     "WHERE {"
                         "?x a nmm:Photo . "
                         "?x tracker:available true "
-                        "FILTER((nfo:fileLastModified(?x)>'2008-06-01T12:05:08'))"
+                        "FILTER((nfo:fileLastModified(?x)>'2008-06-01T12:05:08.000'))"
                     "} "
                     "GROUP BY ?x";
     } {
         QGalleryFilter filter = !(
                 QDocumentGallery::lastModified > QDateTime(QDate(2008, 06, 01), QTime(12, 5, 8)));
 
-        QTest::newRow("!(Image.lastModified > 2008-06-01T12:05:08")
+        QTest::newRow("!(Image.lastModified > 2008-06-01T12:05:08.000")
                 << "Image"
                 << QString()
                 << QGalleryQueryRequest::AllDescendants
@@ -2259,7 +2259,7 @@ void tst_QGalleryTrackerSchema::queryResponseFilter_data()
                     "WHERE {"
                         "?x a nmm:Photo . "
                         "?x tracker:available true "
-                        "FILTER(!(nfo:fileLastModified(?x)>'2008-06-01T12:05:08'))"
+                        "FILTER(!(nfo:fileLastModified(?x)>'2008-06-01T12:05:08.000'))"
                     "} "
                     "GROUP BY ?x";
 
