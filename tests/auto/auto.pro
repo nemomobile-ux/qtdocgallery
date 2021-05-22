@@ -16,7 +16,7 @@ SUBDIRS += \
 
 linux-*:qtHaveModule(dbus):contains(tracker_enabled, yes) {
     SUBDIRS += \
+            qgallerytrackerresultset_tracker \
             qgallerytrackerschema_tracker
-#        qgallerytrackerresultset_tracker \
 }
 
