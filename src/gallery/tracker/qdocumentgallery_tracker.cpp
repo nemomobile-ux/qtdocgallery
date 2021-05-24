@@ -333,7 +333,7 @@ QDocumentGallery::QDocumentGallery(QObject *parent)
     qDBusRegisterMetaType<QVector<QGalleryTrackerGraphUpdate> >();
 
     g_type_init();
-    d->connection = tracker_sparql_connection_get(0, 0);
+    d->connection = tracker_sparql_connection_bus_new ("org.freedesktop.Tracker3.Miner.Files", NULL, NULL, NULL);
 }
 
 QDocumentGallery::~QDocumentGallery()
