@@ -56,6 +56,10 @@
 #include "qgalleryglobal.h"
 
 #include <QtCore/qstringlist.h>
+#include <QObject>
+#include <QMap>
+
+#include <tracker-sparql.h>
 
 #include <tracker-sparql.h>
 

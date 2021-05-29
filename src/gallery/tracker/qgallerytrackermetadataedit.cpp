@@ -43,6 +43,8 @@
 
 #include <QtDBus/qdbuspendingcall.h>
 
+#include <QDebug>
+
 QT_BEGIN_NAMESPACE_DOCGALLERY
 
 QGalleryTrackerMetaDataEdit::QGalleryTrackerMetaDataEdit(
@@ -111,7 +113,7 @@ void QGalleryTrackerMetaDataEdit::commit()
                                          qPrintable(_qt_createUpdateStatement(m_service, m_values, m_oldValues)),
                                          NULL, &error);
         if (error) {
-            qWarning() << "Error execuing sparql commit" << QString::fromUtf8(error->message);
+            qWarning() << "Error executing sparql commit" << QString::fromUtf8(error->message);
             g_error_free(error);
         }
 
