@@ -61,8 +61,6 @@
 
 #include <tracker-sparql.h>
 
-#include <tracker-sparql.h>
-
 QT_BEGIN_NAMESPACE_DOCGALLERY
 
 class QGalleryTrackerMetaDataEdit : public QObject
